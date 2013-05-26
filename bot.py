@@ -55,7 +55,7 @@ while(True):
               if word.startswith('%'):
                   word=word.lstrip('%')
                   word=wildcards[int(word)]
-                  #word=' '.join(pronouns.get(s,s) for s in word.split())
+                  word=' '.join(pronouns.get(s,s) for s in word.split())
               response+=word+' '
           break
     
