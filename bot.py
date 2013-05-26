@@ -48,7 +48,6 @@ while(True):
       if re.match(pattern[0],input)!=None:
           wildcards=re.split(pattern[0],input)
           wildcards[:]=[x for x in wildcards if x!='']
-          print wildcards
           rand=random.randint(0,len(pattern[1])-1)
           responseWords=pattern[1][rand].split(' ')
           response=""
