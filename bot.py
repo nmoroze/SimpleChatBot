@@ -22,10 +22,10 @@ respPatterns = [["hello",
                  ["Why do you %0 ?"]],
                 ["(.*) is (.*)",
                  ["Why is %0 %1 ?"]],
-                ["(.*) are (.*)",
-                 ["Why are %0 %1 ?"]],
                 ["why (.*)",
                  ["What do you think?"]],
+                ["(.*) are (.*)",
+                 ["Why are %0 %1 ?"]],
                 ["(.*)",
                  ["Can you please elaborate?",
                  "I don't fully understand.",
@@ -47,8 +47,8 @@ while(True):
       wildcards=[]
       if re.match(pattern[0],input)!=None:
           wildcards=re.split(pattern[0],input)
-          wildcards.remove('')
-          wildcards.remove('')
+          wildcards[:]=[x for x in wildcards if x!='']
+          print wildcards
           rand=random.randint(0,len(pattern[1])-1)
           responseWords=pattern[1][rand].split(' ')
           response=""
@@ -56,7 +56,7 @@ while(True):
               if word.startswith('%'):
                   word=word.lstrip('%')
                   word=wildcards[int(word)]
-                  word=' '.join(pronouns.get(s,s) for s in word.split())
+                  #word=' '.join(pronouns.get(s,s) for s in word.split())
               response+=word+' '
           break
     
