@@ -5,39 +5,39 @@ responses = (
     ("hello",                ("Hi!", "Hello!", "Greetings!", "Howdy!")),
     ("hi",                   ("Hi!", "Hello!", "Greetings!", "Howdy!")),
     ("how are you",          ("I'm fine, thank you.",)),
-    ("i need (.*)",          ("Why do you need %0 ?", "Would it really help you to get %0 ?", "Are you sure you need %0 ?")),
-    ("why don't you (.*)",   ("Do you really think I don't %0 ?", "Perhaps eventually I will %0 .", "Do you really want me to %0 ?")),
-    ("why can't I (.*)",     ("Do you think you should be able to %0 ?", "If you could %0 , what would you do?", "I don't know -- why can't  you %0 ?", "Have you really tried?")),
-    ("i can't (.*)",         ("How do you know you can't %0 ?", "Perhaps you could %0 if you tried.", "What would it take for you to %0 ?")),
-    ("i am (.*)",            ("Did you come to me because you are %0 ?", "How long have you been %0 ?", "How do you feel about being %0 ?")),
-    ("are you (.*)",         ("Why does it matter whether I am %0 ?", "Would you prefer it if I were not %0 ?", "Perhaps you believe I am %0 .", "I may be %0 -- what do you think?")),
+    ("i need (.*)",          ("Why do you need {}?", "Would it really help you to get {}?", "Are you sure you need {}?")),
+    ("why don't you (.*)",   ("Do you really think I don't {}?", "Perhaps eventually I will {}.", "Do you really want me to {}?")),
+    ("why can't I (.*)",     ("Do you think you should be able to {}?", "If you could {}, what would you do?", "I don't know -- why can't you {}?", "Have you really tried?")),
+    ("i can't (.*)",         ("How do you know you can't {}?", "Perhaps you could {}if you tried.", "What would it take for you to {}?")),
+    ("i am (.*)",            ("Did you come to me because you are {}?", "How long have you been {}?", "How do you feel about being {}?")),
+    ("are you (.*)",         ("Why does it matter whether I am {}?", "Would you prefer it if I were not {}?", "Perhaps you believe I am {}.", "I may be {}-- what do you think?")),
     ("how (.*)",             ("How do you suppose?", "Perhaps you can answer your own question.", "Why can't you answer your question?", "What is it you're really asking?")),
-    ("i think (.*)",         ("Do you doubt %0 ?", "Do you really think so?", "But you're not sure %0 ?")),
+    ("i think (.*)",         ("Do you doubt {}?", "Do you really think so?", "But you're not sure {}?")),
     ("(.*) friend (.*)",     ("Tell me more about your friends.", "What do you value in a friend?")),
-    ("yes",                  ("Okay, but can  you tell me more?", "Can you actually be sure?", "You seem quite certain.")),
+    ("yes",                  ("Okay, but can you tell me more?", "Can you actually be sure?", "You seem quite certain.")),
     ("no",                   ("Why not?", "Can you tell me why you say no?", "Are you sure?")),
-    ("is it (.*)",           ("Do you think it is %0 ?", "Perhaps it's %0 -- what do you think?", "If it were %0 , what would you do?", "It could well be that %0 .")),
-    ("can you (.*)",         ("If I could %0 , then what?", "Why do you ask if I can %0 ?")),
-    ("can i (.*)",           ("Do you want to be able to %0 ?", "If you could %0 , would you?")),
-    ("you are (.*)",         ("Why do you think I am %0 ?", "Perhaps you would like me to be %0 .", "Are you really talking about yourself?")),
-    ("you're (.*)",          ("Why do you say I am %0 ?", "Why do you think I am %0 ?", "Are we talking about you, or me?")),
-    ("i don't (.*)",         ("Why don't you %0  ?", "DO you want to %0 ?")),
-    ("i feel (.*)",          ("Tell me more about these feelings.", "Do you often feel %0 ?", "When do you usually feel %0 ?", "When you feel %0 , what do you do?")),
-    ("i have (.*)",          ("Why do you tell me that you've %0 ?", "Have you really %0 ?", "Now that you have %0, what will you do next?")),
-    ("i would (.*)",         ("Could you explain why you would %0 ?", "Why would you %0 ?", "Who else knows that you would %0 ?")),
-    ("is there (.*)",        ("Do you think there is %0 ?", "Is it likely that there is %0 ?", "Would you like there to be %0 ?")),
-    ("my (.*)",              ("Why do you say that your %0 ?", "When your %0 , how do you feel?")),
-    ("you (.*)",             ("We should be discussing you, not me.", "Why do you say that about me?", "Why do you care whether I %0 ?")),
-    ("i want (.*)",          ("What would it mean to you if you got %0 ?", "Why do you want %0 ?", "What would you do if you got %0 ?", "If you got %0, then what you do?")),
-    ("my name is (.*)",      ("Hi, %0",)),
+    ("is it (.*)",           ("Do you think it is {}?", "Perhaps it's {}-- what do you think?", "If it were {}, what would you do?", "It could well be that {}.")),
+    ("can you (.*)",         ("If I could {}, then what?", "Why do you ask if I can {}?")),
+    ("can i (.*)",           ("Do you want to be able to {}?", "If you could {}, would you?")),
+    ("you are (.*)",         ("Why do you think I am {}?", "Perhaps you would like me to be {}.", "Are you really talking about yourself?")),
+    ("you're (.*)",          ("Why do you say I am {}?", "Why do you think I am {}?", "Are we talking about you, or me?")),
+    ("i don't (.*)",         ("Why don't you {}?", "DO you want to {}?")),
+    ("i feel (.*)",          ("Tell me more about these feelings.", "Do you often feel {}?", "When do you usually feel {}?", "When you feel {}, what do you do?")),
+    ("i have (.*)",          ("Why do you tell me that you've {}?", "Have you really {}?", "Now that you have {}, what will you do next?")),
+    ("i would (.*)",         ("Could you explain why you would {}?", "Why would you {}?", "Who else knows that you would {}?")),
+    ("is there (.*)",        ("Do you think there is {}?", "Is it likely that there is {}?", "Would you like there to be {}?")),
+    ("my name is (.*)",      ("Hi, {}",)),
+    ("my (.*)",              ("Why do you say that your {}?", "When your {}, how do you feel?")),
+    ("you (.*)",             ("We should be discussing you, not me.", "Why do you say that about me?", "Why do you care whether I {}?")),
+    ("i want (.*)",          ("What would it mean to you if you got {}?", "Why do you want {}?", "What would you do if you got {}?", "If you got {}, then what you do?")),
     ("i don't know (.*)",    ("Perhaps you should learn.", "I don't know either.")),
-    ("i'm (.*)",             ("Why are you %0 ?",)),
-    ("because (.*)",         ("if %0, what else is true?", "Is that a good reason?", "Are there any other good reasons?", "Is that the only reason?", "Why do you think %0 ?")),
-    ("i (.*)",               ("Why do you %0 ?",)),
-    ("(.*) is (.*)",         ("Why is %0 %1 ?",)),
-    ("(.*) can't (.*)",      ("Why can't %0 , %1")),
-    ("why (.*)",             ("What do you think?", "Why do you think %0 ?", "Why don't you know the answer yourself?")),
-    ("(.*) are (.*)",        ("Why are %0 %1 ?",)),
+    ("i'm (.*)",             ("Why are you {}?",)),
+    ("because (.*)",         ("if {}, what else is true?", "Is that a good reason?", "Are there any other good reasons?", "Is that the only reason?", "Why do you think {}?")),
+    ("i (.*)",               ("Why do you {}?",)),
+    ("(.*) is (.*)",         ("Why is {} {}?",)),
+    ("(.*) can't (.*)",      ("Why can't {}, {}")),
+    ("why (.*)",             ("What do you think?", "Why do you think {}?", "Why don't you know the answer yourself?")),
+    ("(.*) are (.*)",        ("Why are {} {}?",)),
     ("(.*)",                 ("Can you please elaborate?", "I don't fully understand.", "Let's stop talking about this.", "How are you feeling about this?")),
 )
 
@@ -49,34 +49,32 @@ pronouns = {
     "you": "I",
     "am": "are",
     "my": "your",
-    "you're": "I'm"
+    "you're": "I'm",
+    "was": "were"
 }
 
 random.seed()
 print "I'm psychiatrist bot. I can make you feel better. Tell me how you're feeling!"
 
 while True:
-    input = raw_input("> ")
-    input = input.lower().rstrip('.!?')
+    input = raw_input("> ").lower().rstrip('.!?')
     
     for pattern in responses:
         wildcards = []
         if re.match(pattern[0], input):
-            wildcards = re.split(pattern[0], input)
-            wildcards = filter(bool, wildcards) # returns all e in wildcards for which bool(e) == True
-            response = "" 
-            for word in random.choice(pattern[1]).split(' '):
-                if word.startswith('%'):
-                    word = wildcards[int(word.lstrip('%'))] # get the input words to fill in
-                    word = ' '.join(pronouns.get(s, s) for s in word.split()) # swap pronouns to make grammar correct
-                response += word + ' '
+            wildcards = filter(bool, re.split(pattern[0], input))
+            # replace pronouns
+            wildcards = [' '.join(pronouns.get(word, word) for word in wildcard.split()) for wildcard in wildcards]
+
+            response = random.choice(pattern[1])
+            response = response.format(*wildcards)
+
             break
     
     print response
           
 
-        
-         
+
               
                 
               
