@@ -57,21 +57,25 @@ random.seed()
 print "I'm psychiatrist bot. I can make you feel better. Tell me how you're feeling!"
 
 while True:
-    input = raw_input("> ").lower().rstrip('.!?')
+    input = re.split("[\.!?]",raw_input("> ").lower().rstrip('.!?'))
+    full_reply=' '
     
-    for pattern in responses:
-        wildcards = []
-        if re.match(pattern[0], input):
-            wildcards = filter(bool, re.split(pattern[0], input))
-            # replace pronouns
-            wildcards = [' '.join(pronouns.get(word, word) for word in wildcard.split()) for wildcard in wildcards]
+    for sentence in input:
+        sentence=sentence.lstrip()
+        for pattern in responses:
+            wildcards = []
+            if re.match(pattern[0], sentence):
+                wildcards = filter(bool, re.split(pattern[0], sentence))
+                # replace pronouns
+                wildcards = [' '.join(pronouns.get(word, word) for word in wildcard.split()) for wildcard in wildcards]
 
-            response = random.choice(pattern[1])
-            response = response.format(*wildcards)
-
-            break
+                response = random.choice(pattern[1])
+                response = response.format(*wildcards)
+                full_reply+=response+' '
+                
+                break
     
-    print response
+    print full_reply
           
 
 
